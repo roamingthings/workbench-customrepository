@@ -1,0 +1,3 @@
+= CustomRepositoryWorkbench - A Project to explore custom repositories with Spring
+
+This workbench project demonstrates how to extend Spring repositories with custom methods.
