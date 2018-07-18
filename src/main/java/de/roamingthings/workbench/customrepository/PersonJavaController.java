@@ -1,16 +1,18 @@
 package de.roamingthings.workbench.customrepository;
 
-import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
 @RestController
-@RequiredArgsConstructor
 public class PersonJavaController {
 
     private final PersonJavaRepository personJavaRepository;
+
+    public PersonJavaController(PersonJavaRepository personJavaRepository) {
+        this.personJavaRepository = personJavaRepository;
+    }
 
     @GetMapping("/java/persons")
     public List<Person> findAllPersons() {
